@@ -32,6 +32,7 @@ type CronJobReconciler struct {
 	client.Client
 	Log    logr.Logger
 	Scheme *runtime.Scheme
+	Clock
 }
 
 // +kubebuilder:rbac:groups=batch.github.com/kondoumh/kubebuilder-study,resources=cronjobs,verbs=get;list;watch;create;update;patch;delete
