@@ -101,7 +101,7 @@ func (r *CronJob) validateCronJob() error {
 		r.Name, allErrs)
 }
 
-func (r. *CronJob) validateCronJobSpec() *field.Error {
+func (r *CronJob) validateCronJobSpec() *field.Error {
 	if _, err := cron.ParseStandard(schedule); err != nil {
 		return field.Invalid(fldPath, schedule, err.Error())
 	}
